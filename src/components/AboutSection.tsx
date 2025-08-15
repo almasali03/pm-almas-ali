@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, Target, BarChart3, Palette, Search } from "lucide-react";
+import { CheckCircle, Target, BarChart3, Palette, Lightbulb } from "lucide-react";
 const AboutSection = () => {
   const strengths = [{
     icon: Target,
@@ -8,15 +8,15 @@ const AboutSection = () => {
     description: "Measurable results, clear scope, milestones, acceptance criteria."
   }, {
     icon: BarChart3,
-    title: "Data-Driven Product Analytics",
-    description: "Analytics tools (GA4, Mixpanel, CleverTap) and AI insights informing decisions."
+    title: "Data-Driven Product Decisions",
+    description: "Using both qualitative + quantitative data, product analytics, conversion funnels, experimentation."
   }, {
     icon: Palette,
     title: "UI/UX & Prototyping Acumen",
     description: "Concept to clickable prototype, intuitive user experiences."
   }, {
-    icon: Search,
-    title: "Problem-Solving Through Real-World Scenarios",
+    icon: Lightbulb,
+    title: "Problem-Solving",
     description: "Breaking down complex issues, deep analysis, cross-functional insights."
   }];
   const highlights = ["Launched products across 4 APAC markets in 30 days", "Reduced verification failures by 60%, improved KYC conversion by 20%", "Built an AI content engine saving 8–12 hours/week; consistently producing 3–5 posts/week"];
