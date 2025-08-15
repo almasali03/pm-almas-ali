@@ -1,23 +1,23 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, Target, MessageSquare, Zap } from "lucide-react";
+import { CheckCircle, Target, BarChart3, Palette, Search } from "lucide-react";
 const AboutSection = () => {
   const strengths = [{
     icon: Target,
-    title: "Outcome-first delivery",
-    description: "Clear scope, milestones, acceptance criteria."
+    title: "Outcome-First Delivery",
+    description: "Measurable results, clear scope, milestones, acceptance criteria."
   }, {
-    icon: CheckCircle,
-    title: "Reliability",
-    description: "Error handling, logging, approvals, rollback plans."
+    icon: BarChart3,
+    title: "Data-Driven Product Analytics",
+    description: "Analytics tools (GA4, Mixpanel, CleverTap) and AI insights informing decisions."
   }, {
-    icon: MessageSquare,
-    title: "Communication",
-    description: "Concise specs, walkthroughs, clean documentation."
+    icon: Palette,
+    title: "UI/UX & Prototyping Acumen",
+    description: "Concept to clickable prototype, intuitive user experiences."
   }, {
-    icon: Zap,
-    title: "Velocity",
-    description: "Ship iteratively, gather data, enable independent team ownership."
+    icon: Search,
+    title: "Problem-Solving Through Real-World Scenarios",
+    description: "Breaking down complex issues, deep analysis, cross-functional insights."
   }];
   const highlights = ["Launched products across 4 APAC markets in 30 days", "Reduced verification failures by 60%, improved KYC conversion by 20%", "Built an AI content engine saving 8–12 hours/week; consistently producing 3–5 posts/week"];
   return <section className="py-20 bg-gradient-subtle section-padding" id="about">
