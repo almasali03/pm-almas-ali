@@ -166,7 +166,7 @@ export default function Portfolio({
     contributions: "As Co-Founder, I utilized skills in product management, analytics and prototyping to design and launch the platform. I managed compliance, built partnerships, onboarded technology vendors, and led product pitches to investors and strategic partners.",
     outcome: "The platform achieved over 500k app downloads on the Google Playstore, facilitated over 60,000 loans and investments, and became the 3rd largest P2P company in India by 2019. This success underscored the platform's impact on the lending landscape.",
     technologies: ["Product Development", "MVP Design", "FinTech", "Investment Strategy", "Product Management", "Compliance"],
-    image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "/p2p-lending.png",
     demo: "#"
   }, {
     id: 2,
@@ -178,7 +178,7 @@ export default function Portfolio({
     contributions: "Developed India's first mobile app enabling GST payments through credit cards. Created seamless 12-step user flow integrating GST Portal with ICICI Bank partnership. Features included multi-GSTIN management, automated KYC, payment reminders, and flexible settlement options.",
     outcome: "Launched first-of-its-kind solution providing 30-50 days working capital extension. Achieved $2.4M revenue in first quarter with 3 bank partnerships for scale. Delivered complete mobile-first experience with PCI DSS compliance, serving SMEs nationwide.",
     technologies: ["Payment Solutions", "GST Integration", "Financial Innovation", "Credit Cards", "Mobile-First Design"],
-    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "/gst-payments.png",
     demo: "#"
   }, {
     id: 3,
@@ -190,7 +190,7 @@ export default function Portfolio({
     contributions: "I analyzed the onboarding funnel to identify critical drop-off points. Through user cohort analysis and interviews, I pinpointed key pain areas. Collaborating with the support team, I proposed solutions such as simplifying KYC steps, integrating third-party verification APIs, and providing an overview page with guidance.",
     outcome: "The project led to a 20% increase in KYC completion rates and a reduction in manual rejections by the operations team, significantly enhancing the user onboarding experience.",
     technologies: ["User Experience", "Data Analysis", "A/B Testing", "Conversion Rate Optimization", "User Research"],
-    image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "/onboarding-optimization.svg",
     demo: "#"
   }, {
     id: 4,
@@ -202,7 +202,7 @@ export default function Portfolio({
     contributions: "Designed & built an automated workflow using Google Sheets as a content tracker, Make.com for orchestration, OpenAI for text generation, DALL·E for image generation, and Social APIs for publishing. Implemented branching logic for platform-specific copy, robust file-handling, automated status updates, and alerting, plus authored a clear SOP for future operators.",
     outcome: "The engine now produces 3–5 posts every week, saves 8–12 hours of manual work, and provides full transparency via real-time status updates in Google Sheets.",
     technologies: ["Google Sheets", "Make.com", "OpenAI", "DALL·E", "Social Media APIs"],
-    image: "https://images.unsplash.com/photo-1515378934055-12adf0ca3894?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "/social-media-automation.png",
     demo: "#"
   }];
   const strengths = [{
