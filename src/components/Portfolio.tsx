@@ -37,6 +37,13 @@ export default function Portfolio({
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // Typewriter animation states
+  const titles = ["Product Manager", "FinTech Expert", "AI Product Builder"];
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [showCursor, setShowCursor] = useState(true);
+
   // Section refs
   const sections = ["home", "about", "skills", "projects", "contact"];
   const homeRef = useRef<HTMLElement>(null);
@@ -110,6 +117,40 @@ export default function Portfolio({
     return () => {
       window.removeEventListener('keydown', handleEsc);
     };
+  }, []);
+
+  // Typewriter animation effects
+  useEffect(() => {
+    const currentTitle = titles[currentTitleIndex];
+    const typingSpeed = isDeleting ? 50 : 100;
+    const displayTime = 2000;
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting && currentText === currentTitle) {
+        // Finished typing, wait then start deleting
+        setTimeout(() => setIsDeleting(true), displayTime);
+      } else if (isDeleting && currentText === "") {
+        // Finished deleting, move to next title
+        setIsDeleting(false);
+        setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+      } else if (!isDeleting) {
+        // Continue typing
+        setCurrentText(currentTitle.substring(0, currentText.length + 1));
+      } else {
+        // Continue deleting
+        setCurrentText(currentTitle.substring(0, currentText.length - 1));
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [currentText, isDeleting, currentTitleIndex, titles]);
+
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+
+    return () => clearInterval(cursorInterval);
   }, []);
 
   // Content data
@@ -283,7 +324,8 @@ export default function Portfolio({
                   {name}
                 </h1>
                 <h2 className="text-xl md:text-2xl mb-3 text-gray-600 dark:text-gray-300">
-                  {title} with FinTech Expertise
+                  {currentText} with FinTech Expertise
+                  <span className={`inline-block ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>
                 </h2>
                 <div className="flex items-center mb-6">
                   <div className="flex items-center mr-4">
