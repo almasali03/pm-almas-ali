@@ -38,7 +38,6 @@ export default function Portfolio({
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Typewriter animation states
-  const titles = ["Product Manager", "FinTech Expert", "AI Product Builder"];
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -121,29 +120,32 @@ export default function Portfolio({
 
   // Typewriter animation effects
   useEffect(() => {
+    const titles = ["Product Manager", "FinTech Expert", "AI Product Builder"];
+    let timeout: NodeJS.Timeout;
     const currentTitle = titles[currentTitleIndex];
     const typingSpeed = isDeleting ? 50 : 100;
     const displayTime = 3000;
 
-    const timeout = setTimeout(() => {
-      if (!isDeleting && currentText === currentTitle) {
-        // Finished typing, wait then start deleting
-        setTimeout(() => setIsDeleting(true), displayTime);
-      } else if (isDeleting && currentText === "") {
-        // Finished deleting, move to next title
-        setIsDeleting(false);
-        setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
-      } else if (!isDeleting) {
-        // Continue typing
-        setCurrentText(currentTitle.substring(0, currentText.length + 1));
-      } else {
-        // Continue deleting
-        setCurrentText(currentTitle.substring(0, currentText.length - 1));
-      }
-    }, typingSpeed);
+    if (!isDeleting && currentText === currentTitle) {
+      // Finished typing, wait then start deleting
+      timeout = setTimeout(() => setIsDeleting(true), displayTime);
+    } else if (isDeleting && currentText === "") {
+      // Finished deleting, move to next title
+      setIsDeleting(false);
+      setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+    } else {
+      // Continue typing or deleting
+      timeout = setTimeout(() => {
+        if (!isDeleting) {
+          setCurrentText(currentTitle.substring(0, currentText.length + 1));
+        } else {
+          setCurrentText(currentText.substring(0, currentText.length - 1));
+        }
+      }, typingSpeed);
+    }
 
     return () => clearTimeout(timeout);
-  }, [currentText, isDeleting, currentTitleIndex, titles]);
+  }, [currentText, isDeleting, currentTitleIndex]);
 
   useEffect(() => {
     const cursorInterval = setInterval(() => {
