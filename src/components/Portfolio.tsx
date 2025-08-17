@@ -123,7 +123,7 @@ export default function Portfolio({
   useEffect(() => {
     const currentTitle = titles[currentTitleIndex];
     const typingSpeed = isDeleting ? 50 : 100;
-    const displayTime = 2000;
+    const displayTime = 3000;
 
     const timeout = setTimeout(() => {
       if (!isDeleting && currentText === currentTitle) {
@@ -324,7 +324,7 @@ export default function Portfolio({
                   {name}
                 </h1>
                 <h2 className="text-xl md:text-2xl mb-3 text-gray-600 dark:text-gray-300">
-                  {currentText} with FinTech Expertise
+                  {currentText}
                   <span className={`inline-block ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>
                 </h2>
                 <div className="flex items-center mb-6">
