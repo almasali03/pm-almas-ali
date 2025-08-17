@@ -382,7 +382,7 @@ export default function Portfolio({
                   })}
                   </div>
                 </div>
-                <a href="#" className="inline-flex items-center px-6 py-3 rounded-md font-medium transition-all duration-300" style={{
+                <a href="/Almas_Ali.pdf" download className="inline-flex items-center px-6 py-3 rounded-md font-medium transition-all duration-300" style={{
                 backgroundColor: themeStyles.accentColor,
                 color: "#ffffff"
               }}>
