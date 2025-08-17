@@ -1,7 +1,47 @@
 import { Button } from "@/components/ui/button";
 import heroBackground from "@/assets/hero-bg.jpg";
 import { ArrowRight, Mail, FileText } from "lucide-react";
+import { useState, useEffect } from "react";
 const HeroSection = () => {
+  const titles = ["Product Manager", "FinTech Expert", "AI Product Builder"];
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    const currentTitle = titles[currentTitleIndex];
+    const typingSpeed = isDeleting ? 50 : 100;
+    const displayTime = 2000;
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting && currentText === currentTitle) {
+        // Finished typing, wait then start deleting
+        setTimeout(() => setIsDeleting(true), displayTime);
+      } else if (isDeleting && currentText === "") {
+        // Finished deleting, move to next title
+        setIsDeleting(false);
+        setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+      } else if (!isDeleting) {
+        // Continue typing
+        setCurrentText(currentTitle.substring(0, currentText.length + 1));
+      } else {
+        // Continue deleting
+        setCurrentText(currentTitle.substring(0, currentText.length - 1));
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [currentText, isDeleting, currentTitleIndex, titles]);
+
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+
+    return () => clearInterval(cursorInterval);
+  }, []);
+
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({
       behavior: 'smooth'
@@ -27,7 +67,10 @@ const HeroSection = () => {
             <span className="block text-white/90 text-xl lg:text-2xl font-normal mb-2">
               Almas Ali
             </span>
-            <span className="block text-white font-bold">Product Manager</span>
+            <span className="block text-white font-bold">
+              {currentText}
+              <span className={`inline-block ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>
+            </span>
             <span className="block text-white/80 text-2xl lg:text-3xl xl:text-4xl font-normal mt-2">and upcoming AI Product Builder</span>
           </h1>
           
