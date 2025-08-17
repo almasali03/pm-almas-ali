@@ -569,7 +569,7 @@ export default function Portfolio({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {projects.map(project => <div key={project.id} className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
                   <div className="h-48 overflow-hidden">
-                    <ImageWithFallback src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    <ImageWithFallback src={project.image} alt={project.title} className="w-full h-full object-contain transition-transform duration-500 hover:scale-105" />
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">{project.title}</h3>
@@ -808,7 +808,7 @@ export default function Portfolio({
                 
                 <div className="p-6">
                   <div className="mb-6">
-                    <ImageWithFallback src={selectedProject.image} alt={selectedProject.title} className="w-full h-64 object-cover rounded-lg" />
+                    <ImageWithFallback src={selectedProject.image} alt={selectedProject.title} className="w-full h-64 object-contain rounded-lg bg-gray-50 dark:bg-gray-700" />
                   </div>
                   
                   <div className="space-y-6">
