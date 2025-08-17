@@ -190,7 +190,7 @@ export default function Portfolio({
     contributions: "I analyzed the onboarding funnel to identify critical drop-off points. Through user cohort analysis and interviews, I pinpointed key pain areas. Collaborating with the support team, I proposed solutions such as simplifying KYC steps, integrating third-party verification APIs, and providing an overview page with guidance.",
     outcome: "The project led to a 20% increase in KYC completion rates and a reduction in manual rejections by the operations team, significantly enhancing the user onboarding experience.",
     technologies: ["User Experience", "Data Analysis", "A/B Testing", "Conversion Rate Optimization", "User Research"],
-    image: "/onboarding-optimization.svg",
+    image: "/onboarding-optimization.png",
     demo: "#"
   }, {
     id: 4,
