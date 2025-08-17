@@ -645,39 +645,10 @@ export default function Portfolio({
               </p>
             </div>
             
-            <div className="flex flex-col md:flex-row gap-8">
-              <div className="md:w-1/2">
-                <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
-                  <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-white">Send Me a Message</h3>
-                  <div>
-                    <div className="mb-4">
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
-                      <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Your name" />
-                    </div>
-                    <div className="mb-4">
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
-                      <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Your email" />
-                    </div>
-                    <div className="mb-4">
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
-                      <input type="text" id="subject" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Subject" />
-                    </div>
-                    <div className="mb-6">
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
-                      <textarea id="message" rows={4} className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Your message"></textarea>
-                    </div>
-                    <button type="button" className="w-full px-6 py-3 rounded-md font-medium transition-all duration-300 text-white" style={{
-                    backgroundColor: themeStyles.accentColor
-                  }}>
-                      Send Message
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="md:w-1/2">
-                <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 h-full">
-                  <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-white">Contact Information</h3>
+            <div className="flex justify-center">
+              <div className="max-w-2xl w-full">
+                <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-8">
+                  <h3 className="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-white">Contact Information</h3>
                   
                   <div className="space-y-6">
                     <div className="flex items-start">
