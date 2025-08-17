@@ -699,7 +699,7 @@ export default function Portfolio({
                 <div className="pt-8 mt-8 border-t border-gray-200 dark:border-gray-700">
                   <h4 className="text-lg font-medium mb-6 text-center text-gray-900 dark:text-white">Connect With Me</h4>
                   <div className="flex justify-center space-x-6">
-                    <a href="https://www.linkedin.com/in/almasali03/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full transition-colors duration-300" style={{
+                    <a href="https://www.linkedin.com/in/alialmas/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full transition-colors duration-300" style={{
                     backgroundColor: `${themeStyles.accentColor}20`
                   }}>
                       <Linkedin size={24} style={{
