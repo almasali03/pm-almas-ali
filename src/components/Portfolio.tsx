@@ -735,7 +735,6 @@ export default function Portfolio({
                     <div>
                       <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Location</h4>
                       <p className="text-gray-600 dark:text-gray-300">Bhopal, India</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Willing to Relocate</p>
                     </div>
                   </div>
                 </div>
