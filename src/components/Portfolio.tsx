@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Github, Linkedin, Mail, ExternalLink, ChevronRight, MapPin, Phone, Award, TrendingUp, CheckCircle, Target, BarChart3, Palette, Lightbulb, FileText } from "lucide-react";
+import { Menu, X, Github, Linkedin, Mail, ExternalLink, ChevronRight, MapPin, Phone, Award, TrendingUp, CheckCircle, Target, BarChart3, Palette, Lightbulb, FileText, MessageCircle } from "lucide-react";
 function ImageWithFallback(props: any) {
   const [didError, setDidError] = useState(false);
   const {
@@ -698,13 +698,13 @@ export default function Portfolio({
                       <div className="flex-shrink-0 p-3 rounded-full" style={{
                       backgroundColor: `${themeStyles.accentColor}20`
                     }}>
-                        <Phone size={24} style={{
+                        <MessageCircle size={24} style={{
                         color: themeStyles.accentColor
                       }} />
                       </div>
                       <div className="ml-4">
-                        <h4 className="text-base font-medium text-gray-900 dark:text-white">Phone</h4>
-                        <a href="tel:+919677136490" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                        <h4 className="text-base font-medium text-gray-900 dark:text-white">Chat on WhatsApp</h4>
+                        <a href="http://wa.me/+919677136490" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
                           +91 9677136490
                         </a>
                       </div>
