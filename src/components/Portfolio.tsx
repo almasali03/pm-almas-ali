@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Github, Linkedin, Mail, ExternalLink, ChevronRight, MapPin, Phone, Award, TrendingUp, CheckCircle, Target, BarChart3, Palette, Lightbulb, FileText } from "lucide-react";
+import { Menu, X, Github, Linkedin, Mail, ExternalLink, ChevronRight, MapPin, Phone, Award, TrendingUp, CheckCircle, Target, BarChart3, Palette, Lightbulb, FileText, MessageCircle } from "lucide-react";
 function ImageWithFallback(props: any) {
   const [didError, setDidError] = useState(false);
   const {
@@ -320,7 +320,7 @@ export default function Portfolio({
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg" style={{
                 backgroundColor: themeStyles.accentColor
               }}>
-                  <span>8+</span>
+                  <span>7+</span>
                   <span className="text-xs">Years Exp</span>
                 </div>
               </div>
@@ -643,114 +643,83 @@ export default function Portfolio({
               <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Interested in discussing Product, scope of AI in Product, or potential opportunities? Feel free to reach out!</p>
             </div>
             
-            <div className="flex flex-col md:flex-row gap-8">
-              <div className="md:w-1/2">
-                <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
-                  <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-white">Send Me a Message</h3>
-                  <div>
-                    <div className="mb-4">
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
-                      <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Your name" />
-                    </div>
-                    <div className="mb-4">
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
-                      <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Your email" />
-                    </div>
-                    <div className="mb-4">
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
-                      <input type="text" id="subject" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Subject" />
-                    </div>
-                    <div className="mb-6">
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
-                      <textarea id="message" rows={4} className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Your message"></textarea>
-                    </div>
-                    <button type="button" className="w-full px-6 py-3 rounded-md font-medium transition-all duration-300 text-white" style={{
-                    backgroundColor: themeStyles.accentColor
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-8">
+                <h3 className="text-xl font-bold mb-8 text-center text-gray-900 dark:text-white">Contact Information</h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="flex-shrink-0 p-4 rounded-full mb-4" style={{
+                    backgroundColor: `${themeStyles.accentColor}20`
                   }}>
-                      Send Message
-                    </button>
+                      <Mail size={32} style={{
+                      color: themeStyles.accentColor
+                    }} />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Email</h4>
+                      <a href="mailto:almasali03@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        almasali03@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col items-center text-center">
+                    <div className="flex-shrink-0 p-4 rounded-full mb-4" style={{
+                    backgroundColor: `${themeStyles.accentColor}20`
+                  }}>
+                      <MessageCircle size={32} style={{
+                      color: themeStyles.accentColor
+                    }} />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Chat on WhatsApp</h4>
+                      <a href="http://wa.me/+919677136490" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        +91 9677136490
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col items-center text-center">
+                    <div className="flex-shrink-0 p-4 rounded-full mb-4" style={{
+                    backgroundColor: `${themeStyles.accentColor}20`
+                  }}>
+                      <MapPin size={32} style={{
+                      color: themeStyles.accentColor
+                    }} />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Location</h4>
+                      <p className="text-gray-600 dark:text-gray-300">Bhopal, India</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Willing to Relocate</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="md:w-1/2">
-                <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 h-full">
-                  <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-white">Contact Information</h3>
-                  
-                  <div className="space-y-6">
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 p-3 rounded-full" style={{
-                      backgroundColor: `${themeStyles.accentColor}20`
-                    }}>
-                        <Mail size={24} style={{
-                        color: themeStyles.accentColor
-                      }} />
-                      </div>
-                      <div className="ml-4">
-                        <h4 className="text-base font-medium text-gray-900 dark:text-white">Email</h4>
-                        <a href="mailto:almasali03@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
-                          almasali03@gmail.com
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 p-3 rounded-full" style={{
-                      backgroundColor: `${themeStyles.accentColor}20`
-                    }}>
-                        <Phone size={24} style={{
-                        color: themeStyles.accentColor
-                      }} />
-                      </div>
-                      <div className="ml-4">
-                        <h4 className="text-base font-medium text-gray-900 dark:text-white">Phone</h4>
-                        <a href="tel:+919677136490" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
-                          +91 9677136490
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 p-3 rounded-full" style={{
-                      backgroundColor: `${themeStyles.accentColor}20`
-                    }}>
-                        <MapPin size={24} style={{
-                        color: themeStyles.accentColor
-                      }} />
-                      </div>
-                      <div className="ml-4">
-                        <h4 className="text-base font-medium text-gray-900 dark:text-white">Location</h4>
-                        <p className="text-gray-600 dark:text-gray-300">Bhopal, India</p>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">Willing to Relocate</p>
-                      </div>
-                    </div>
-                    
-                    <div className="pt-6 border-t border-gray-200 dark:border-gray-700">
-                      <h4 className="text-base font-medium mb-4 text-gray-900 dark:text-white">Connect With Me</h4>
-                      <div className="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/almasali03/" className="p-3 rounded-full transition-colors" style={{
-                        backgroundColor: `${themeStyles.accentColor}20`
-                      }}>
-                          <Linkedin size={20} style={{
-                          color: themeStyles.accentColor
-                        }} />
-                        </a>
-                        <a href="https://github.com/almasali03" className="p-3 rounded-full transition-colors" style={{
-                        backgroundColor: `${themeStyles.accentColor}20`
-                      }}>
-                          <Github size={20} style={{
-                          color: themeStyles.accentColor
-                        }} />
-                        </a>
-                        <a href="mailto:almasali03@gmail.com" className="p-3 rounded-full transition-colors" style={{
-                        backgroundColor: `${themeStyles.accentColor}20`
-                      }}>
-                          <Mail size={20} style={{
-                          color: themeStyles.accentColor
-                        }} />
-                        </a>
-                      </div>
-                    </div>
+                
+                <div className="pt-8 mt-8 border-t border-gray-200 dark:border-gray-700">
+                  <h4 className="text-lg font-medium mb-6 text-center text-gray-900 dark:text-white">Connect With Me</h4>
+                  <div className="flex justify-center space-x-6">
+                    <a href="https://www.linkedin.com/in/almasali03/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full transition-colors duration-300" style={{
+                    backgroundColor: `${themeStyles.accentColor}20`
+                  }}>
+                      <Linkedin size={24} style={{
+                      color: themeStyles.accentColor
+                    }} />
+                    </a>
+                    <a href="https://github.com/almasali03" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full transition-colors duration-300" style={{
+                    backgroundColor: `${themeStyles.accentColor}20`
+                  }}>
+                      <Github size={24} style={{
+                      color: themeStyles.accentColor
+                    }} />
+                    </a>
+                    <a href="mailto:almasali03@gmail.com" className="p-3 rounded-full transition-colors duration-300" style={{
+                    backgroundColor: `${themeStyles.accentColor}20`
+                  }}>
+                      <Mail size={24} style={{
+                      color: themeStyles.accentColor
+                    }} />
+                    </a>
                   </div>
                 </div>
               </div>
