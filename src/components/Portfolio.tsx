@@ -320,7 +320,7 @@ export default function Portfolio({
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg" style={{
                 backgroundColor: themeStyles.accentColor
               }}>
-                  <span>7+</span>
+                  <span>8+</span>
                   <span className="text-xs">Years Exp</span>
                 </div>
               </div>
