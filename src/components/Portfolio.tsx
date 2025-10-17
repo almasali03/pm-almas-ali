@@ -26,7 +26,7 @@ interface PortfolioProps {
 export default function Portfolio({
   name = "Almas Ali",
   title = "Product Manager",
-  profileImage = "/lovable-uploads/b133800e-d0b1-425e-8871-633105dd7fe1.png",
+  profileImage = "/profile-photo.png",
   primaryColor = "#4f46e5",
   darkMode = false
 }: PortfolioProps) {
