@@ -100,7 +100,7 @@ export default function Portfolio({
 
 ## 📧 Contact
 
-- **Email**: almasali03@gmail.com
+- **Email**: almas@niveshpe.com
 - **WhatsApp**: +91 9677136490
 - **LinkedIn**: [linkedin.com/in/alialmas](https://linkedin.com/in/alialmas)
 - **GitHub**: [github.com/almasali03](https://github.com/almasali03)

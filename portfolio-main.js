@@ -291,7 +291,7 @@ export default function Portfolio({
       title: "Co-Founder & Chief Lending Officer",
       company: "Z2P",
       period: "Aug 2016 – Oct 2019",
-      location: "Bhopal",
+      location: "Mumbai",
       description: [
         "Designed & launched India's 3rd largest P2P lending platform by disbursement volume",
         "Scaled operations to 60K+ loans, 500K+ downloads, with only 1.6% default rate",
@@ -401,7 +401,7 @@ export default function Portfolio({
                 <div className="flex items-center mb-6">
                   <div className="flex items-center mr-4">
                     <MapPin size={16} className="mr-1 text-gray-500 dark:text-gray-400" />
-                    <span className="text-sm text-gray-500 dark:text-gray-400">Bhopal, India – Willing to Relocate</span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400">Mumbai, India – Willing to Relocate</span>
                   </div>
                   <div className="flex items-center">
                     <Phone size={16} className="mr-1 text-gray-500 dark:text-gray-400" />
@@ -853,8 +853,8 @@ export default function Portfolio({
                       </div>
                       <div className="ml-4">
                         <h4 className="text-base font-medium text-gray-900 dark:text-white">Email</h4>
-                        <a href="mailto:almasali03@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
-                          almasali03@gmail.com
+                        <a href="mailto:almas@niveshpe.com" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                          almas@niveshpe.com
                         </a>
                       </div>
                     </div>
@@ -878,7 +878,7 @@ export default function Portfolio({
                       <div className="ml-4">
                         <h4 className="text-base font-medium text-gray-900 dark:text-white">Location</h4>
                         <p className="text-gray-600 dark:text-gray-300">
-                          Bhopal, Madhya Pradesh, India
+                          Mumbai, India
                         </p>
                       </div>
                     </div>

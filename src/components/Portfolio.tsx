@@ -258,7 +258,7 @@ export default function Portfolio({
     title: "Co-Founder & Chief Lending Officer",
     company: "Z2P",
     period: "Aug 2016 – Oct 2019",
-    location: "Bhopal",
+    location: "Mumbai",
     description: ["Designed & launched India's 3rd largest P2P lending platform by disbursement volume", "Scaled operations to 60K+ loans, 500K+ downloads, with only 1.6% default rate", "Built MVP, owned product roadmap, UI, and user growth channels", "Managed compliance, NBFC partnerships, and technology vendor onboarding"]
   }];
 
@@ -332,7 +332,7 @@ export default function Portfolio({
                 <div className="flex items-center mb-6">
                   <div className="flex items-center mr-4">
                     <MapPin size={16} className="mr-1 text-gray-500 dark:text-gray-400" />
-                    <span className="text-sm text-gray-500 dark:text-gray-400">Bhopal, India</span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400">Mumbai, India</span>
                   </div>
                   <div className="flex items-center">
                     <Phone size={16} className="mr-1 text-gray-500 dark:text-gray-400" />
@@ -702,8 +702,8 @@ export default function Portfolio({
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Email</h4>
-                      <a href="mailto:almasali03@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
-                        almasali03@gmail.com
+                      <a href="mailto:almas@niveshpe.com" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        almas@niveshpe.com
                       </a>
                     </div>
                   </div>
@@ -734,7 +734,7 @@ export default function Portfolio({
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Location</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Bhopal, India</p>
+                      <p className="text-gray-600 dark:text-gray-300">Mumbai, India</p>
                     </div>
                   </div>
                 </div>
@@ -756,7 +756,7 @@ export default function Portfolio({
                       color: themeStyles.accentColor
                     }} />
                     </a>
-                    <a href="mailto:almasali03@gmail.com" className="p-3 rounded-full transition-colors duration-300" style={{
+                    <a href="mailto:almas@niveshpe.com" className="p-3 rounded-full transition-colors duration-300" style={{
                     backgroundColor: `${themeStyles.accentColor}20`
                   }}>
                       <Mail size={24} style={{
