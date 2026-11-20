@@ -102,7 +102,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
       <section className="mx-auto max-w-4xl px-5 py-20 sm:px-8 sm:py-28">
         <Reveal>
           <p className="eyebrow">What I took from it</p>
-          <blockquote className="mt-5 font-display text-3xl leading-snug tracking-tight text-ink italic sm:text-4xl">
+          <blockquote className="mt-5 font-display text-3xl leading-snug tracking-tight text-ink sm:text-4xl">
             “{study.lesson}”
           </blockquote>
         </Reveal>

@@ -118,3 +118,97 @@ export const credentials = [
   { title: "Best Fintech in Madhya Pradesh", by: "Chief Minister's Award · 2017" },
   { title: "B.Tech", by: "VIT University, Vellore · 2016" },
 ];
+
+// Icons come from simple-icons where one exists; others render as a monogram tile.
+export type Tool = { name: string; icon?: string };
+
+export const toolkit: { label: string; tools: Tool[] }[] = [
+  {
+    label: "AI & prototyping",
+    tools: [
+      { name: "Claude", icon: "siClaude" },
+      { name: "OpenAI API" },
+      { name: "MCP", icon: "siModelcontextprotocol" },
+      { name: "ElevenLabs", icon: "siElevenlabs" },
+      { name: "n8n", icon: "siN8n" },
+      { name: "Zapier", icon: "siZapier" },
+      { name: "Make", icon: "siMake" },
+      { name: "React Native", icon: "siReact" },
+      { name: "Expo", icon: "siExpo" },
+      { name: "Figma", icon: "siFigma" },
+      { name: "Postman", icon: "siPostman" },
+      { name: "AWS" },
+    ],
+  },
+  {
+    label: "Growth, analytics & delivery",
+    tools: [
+      { name: "Amplitude" },
+      { name: "Mixpanel", icon: "siMixpanel" },
+      { name: "Google Analytics 4", icon: "siGoogleanalytics" },
+      { name: "Firebase", icon: "siFirebase" },
+      { name: "CleverTap" },
+      { name: "SuprSend" },
+      { name: "Branch" },
+      { name: "Linkrunner" },
+      { name: "Meta Ads", icon: "siMeta" },
+      { name: "Google Ads", icon: "siGoogleads" },
+      { name: "Power BI" },
+      { name: "Zoho", icon: "siZoho" },
+      { name: "Freshworks" },
+      { name: "Jira", icon: "siJira" },
+      { name: "Confluence", icon: "siConfluence" },
+      { name: "Linear", icon: "siLinear" },
+    ],
+  },
+];
+
+export const skills: { label: string; items: string[] }[] = [
+  {
+    label: "Product",
+    items: [
+      "0→1 product strategy",
+      "Prototyping",
+      "PRDs & roadmapping",
+      "GTM & pricing",
+      "Funnel & activation",
+      "Product analytics",
+      "Experimentation",
+      "Regulated launches",
+    ],
+  },
+  {
+    label: "AI products",
+    items: [
+      "LLM pipelines",
+      "Prompt design",
+      "AI assistants with tool use",
+      "RAG & voice AI",
+      "Human-in-the-loop review",
+      "Prototype → engineering hand-off",
+    ],
+  },
+  {
+    label: "Fintech domain",
+    items: [
+      "Mutual fund distribution",
+      "KYC / KRA / CKYC / eSign",
+      "UPI AutoPay & eNACH",
+      "B2B & cross-border payments",
+      "P2P lending",
+      "Fraud & risk",
+      "SEBI / AMFI / RBI compliance",
+    ],
+  },
+  {
+    label: "Product marketing",
+    items: [
+      "Lifecycle & CRM",
+      "Subscription conversion",
+      "Omnichannel journeys",
+      "Paid acquisition",
+      "ASO & SEO",
+      "Referral & field GTM",
+    ],
+  },
+];

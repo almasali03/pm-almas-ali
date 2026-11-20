@@ -4,6 +4,7 @@ import { Fragment, type CSSProperties } from "react";
 import { CountUp } from "@/components/CountUp";
 import { Reveal } from "@/components/Reveal";
 import { ScrollLine } from "@/components/ScrollLine";
+import { Toolkit } from "@/components/Toolkit";
 import { SectionHeading } from "@/components/SectionHeading";
 import { WorkCard } from "@/components/WorkCard";
 import { builds, credentials, experience, hero, principles, profile } from "@/content/site";
@@ -27,7 +28,7 @@ function Hero() {
             {words.map((w, i) => (
               <Fragment key={i}>
                 <span className="hero-word" style={{ "--i": i } as CSSProperties}>
-                  {EMPHASIS.has(w) ? <em className="text-accent">{w}</em> : w}
+                  {EMPHASIS.has(w) ? <span className="marker text-accent">{w}</span> : w}
                 </span>{" "}
               </Fragment>
             ))}
@@ -166,6 +167,21 @@ function Builds() {
   );
 }
 
+function Skills() {
+  return (
+    <section id="skills" className="scroll-mt-20 py-24 sm:py-32">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <SectionHeading
+          eyebrow="Skills & toolkit"
+          title="The craft, and the tools I use to practise it."
+          intro="Product judgement comes first. These are the tools I reach for to research, prototype, measure and ship."
+        />
+        <Toolkit />
+      </div>
+    </section>
+  );
+}
+
 function Experience() {
   return (
     <section id="experience" className="scroll-mt-20 py-24 sm:py-32">
@@ -253,6 +269,7 @@ export default function Home() {
       <Principles />
       <Work />
       <Builds />
+      <Skills />
       <Experience />
       <Contact />
     </>

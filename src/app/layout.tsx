@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Instrument_Serif } from "next/font/google";
+import { Geist_Mono, Inter, Permanent_Marker } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { RevealObserver } from "@/components/RevealObserver";
@@ -8,12 +8,8 @@ import { hero, profile } from "@/content/site";
 import "./globals.css";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
-const serif = Instrument_Serif({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-});
+const mono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const marker = Permanent_Marker({ variable: "--font-marker", subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(profile.siteUrl),
@@ -35,7 +31,7 @@ const bootScript = `(function(){var d=document.documentElement;d.classList.add("
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" data-theme="light" suppressHydrationWarning className={`${inter.variable} ${serif.variable} antialiased`}>
+    <html lang="en" data-theme="light" suppressHydrationWarning className={`${inter.variable} ${mono.variable} ${marker.variable} antialiased`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: bootScript }} />
       </head>
