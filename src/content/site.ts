@@ -119,15 +119,16 @@ export const credentials = [
   { title: "B.Tech", by: "VIT University, Vellore · 2016" },
 ];
 
-// Icons come from simple-icons where one exists; others render as a monogram tile.
-export type Tool = { name: string; icon?: string };
+// Logos: `icon` is a simple-icons export in brand colour; `img` is a file in /public/logos.
+// `imgDark` swaps the file in dark mode; `invertDark` inverts a black mark in dark mode.
+export type Tool = { name: string; icon?: string; img?: string; imgDark?: string; invertDark?: boolean };
 
 export const toolkit: { label: string; tools: Tool[] }[] = [
   {
     label: "AI & prototyping",
     tools: [
       { name: "Claude", icon: "siClaude" },
-      { name: "OpenAI API" },
+      { name: "OpenAI API", img: "/logos/openai.svg", invertDark: true },
       { name: "MCP", icon: "siModelcontextprotocol" },
       { name: "ElevenLabs", icon: "siElevenlabs" },
       { name: "n8n", icon: "siN8n" },
@@ -137,25 +138,25 @@ export const toolkit: { label: string; tools: Tool[] }[] = [
       { name: "Expo", icon: "siExpo" },
       { name: "Figma", icon: "siFigma" },
       { name: "Postman", icon: "siPostman" },
-      { name: "AWS" },
+      { name: "AWS", img: "/logos/aws.svg", imgDark: "/logos/aws-dark.svg" },
     ],
   },
   {
     label: "Growth, analytics & delivery",
     tools: [
-      { name: "Amplitude" },
+      { name: "Amplitude", img: "/logos/amplitude.png" },
       { name: "Mixpanel", icon: "siMixpanel" },
       { name: "Google Analytics 4", icon: "siGoogleanalytics" },
       { name: "Firebase", icon: "siFirebase" },
-      { name: "CleverTap" },
-      { name: "SuprSend" },
-      { name: "Branch" },
-      { name: "Linkrunner" },
+      { name: "CleverTap", img: "/logos/clevertap.png" },
+      { name: "SuprSend", img: "/logos/suprsend.png" },
+      { name: "Branch", img: "/logos/branch.png", invertDark: true },
+      { name: "Linkrunner", img: "/logos/linkrunner.png" },
       { name: "Meta Ads", icon: "siMeta" },
       { name: "Google Ads", icon: "siGoogleads" },
-      { name: "Power BI" },
+      { name: "Power BI", img: "/logos/powerbi.png" },
       { name: "Zoho", icon: "siZoho" },
-      { name: "Freshworks" },
+      { name: "Freshworks", img: "/logos/freshworks.png" },
       { name: "Jira", icon: "siJira" },
       { name: "Confluence", icon: "siConfluence" },
       { name: "Linear", icon: "siLinear" },

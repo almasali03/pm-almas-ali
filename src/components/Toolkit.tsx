@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { CSSProperties } from "react";
 import {
   siClaude,
@@ -46,68 +47,68 @@ const ICONS: Record<string, SimpleIcon> = {
   siZoho,
 };
 
-const monogram = (name: string) =>
-  name
-    .split(/\s+/)
-    .map((w) => w[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
+const HIGHLIGHT_STEP_S = 0.75;
 
-function ToolPill({ tool, dup }: { tool: Tool; dup?: boolean }) {
+// Near-black brand marks would disappear on the dark theme.
+const isDark = (hex: string) => {
+  const [r, g, b] = [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255);
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b < 0.2;
+};
+
+function Logo({ tool }: { tool: Tool }) {
   const icon = tool.icon ? ICONS[tool.icon] : undefined;
-  return (
-    <li
-      data-dup={dup || undefined}
-      aria-hidden={dup || undefined}
-      className="group flex shrink-0 items-center gap-3 rounded-2xl border border-line bg-raised py-2.5 pr-5 pl-2.5"
-      style={icon ? ({ "--brand": `#${icon.hex}` } as CSSProperties) : undefined}
-    >
-      <span className="grid size-9 place-items-center rounded-xl bg-bg">
-        {icon ? (
-          <svg
-            viewBox="0 0 24 24"
-            className="size-[18px] fill-ink-soft transition-colors duration-300 group-hover:fill-[var(--brand)]"
-            aria-hidden
-          >
-            <path d={icon.path} />
-          </svg>
-        ) : (
-          <span className="font-mono text-[11px] font-semibold text-ink-soft">{monogram(tool.name)}</span>
-        )}
-      </span>
-      <span className="text-sm font-medium whitespace-nowrap text-ink">{tool.name}</span>
-    </li>
-  );
-}
-
-function Marquee({ tools, reverse, duration }: { tools: Tool[]; reverse?: boolean; duration: number }) {
-  return (
-    <div className="marquee overflow-hidden py-1">
-      <ul
-        className="marquee-track"
-        data-reverse={reverse || undefined}
-        style={{ "--marquee-duration": `${duration}s` } as CSSProperties}
+  if (icon) {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        className={`size-5 fill-[var(--brand)] ${isDark(icon.hex) ? "dark:fill-ink" : ""}`}
+        style={{ "--brand": `#${icon.hex}` } as CSSProperties}
+        aria-hidden
       >
-        {tools.map((t) => (
-          <ToolPill key={t.name} tool={t} />
-        ))}
-        {tools.map((t) => (
-          <ToolPill key={`${t.name}-dup`} tool={t} dup />
-        ))}
-      </ul>
-    </div>
+        <path d={icon.path} />
+      </svg>
+    );
+  }
+  if (!tool.img) return null;
+  const img = (src: string, className = "") => (
+    <Image src={src} alt="" width={20} height={20} unoptimized className={`size-5 object-contain ${className}`} />
   );
+  if (tool.imgDark) {
+    return (
+      <>
+        {img(tool.img, "dark:hidden")}
+        {img(tool.imgDark, "hidden dark:block")}
+      </>
+    );
+  }
+  return img(tool.img, tool.invertDark ? "dark:invert" : "");
 }
 
 export function Toolkit() {
+  const total = toolkit.reduce((n, g) => n + g.tools.length, 0);
+  let index = 0;
+
   return (
     <>
-      <div className="space-y-6">
-        {toolkit.map((group, i) => (
-          <Reveal key={group.label} delay={i * 120}>
-            <p className="eyebrow mb-3 px-1">{group.label}</p>
-            <Marquee tools={group.tools} reverse={i % 2 === 1} duration={group.tools.length * 4} />
+      <div
+        className="grid gap-10 lg:grid-cols-2"
+        style={{ "--cycle": `${total * HIGHLIGHT_STEP_S}s`, "--step": `${HIGHLIGHT_STEP_S}s` } as CSSProperties}
+      >
+        {toolkit.map((group, g) => (
+          <Reveal key={group.label} delay={g * 120}>
+            <p className="eyebrow mb-4">{group.label}</p>
+            <ul className="flex flex-wrap gap-2.5">
+              {group.tools.map((tool) => (
+                <li
+                  key={tool.name}
+                  className="tool flex items-center gap-2.5 rounded-xl border border-line bg-raised py-2 pr-3.5 pl-2.5"
+                  style={{ "--i": index++ } as CSSProperties}
+                >
+                  <Logo tool={tool} />
+                  <span className="text-sm font-medium whitespace-nowrap text-ink">{tool.name}</span>
+                </li>
+              ))}
+            </ul>
           </Reveal>
         ))}
       </div>
