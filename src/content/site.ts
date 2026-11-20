@@ -1,0 +1,120 @@
+// Every claim on the site must exist in the master resume.
+
+export const profile = {
+  name: "Almas Ali",
+  role: "Product leader · AI & forward-deployed product",
+  location: "Bhopal, India · working remotely since 2019",
+  email: "almasali03@gmail.com",
+  linkedin: "https://www.linkedin.com/in/alialmas",
+  // Set to "/resume.pdf" once the updated resume is in /public.
+  resumeUrl: null as string | null,
+  siteUrl: "https://almasali.vercel.app",
+};
+
+export const hero = {
+  headline: "I start with the problem, not the feature.",
+  intro:
+    "Product leader and two-time fintech co-founder. I build AI products and work alongside customers to take them from first conversation to live, across India, APAC and the Middle East.",
+  stats: [
+    { value: 10, suffix: "+", label: "years building products" },
+    { value: 2, suffix: "", label: "fintechs co-founded" },
+    { value: 4, suffix: "", label: "APAC markets launched" },
+  ],
+};
+
+export const principles = [
+  {
+    title: "Find the real constraint first.",
+    body: "Most product problems are a constraint in disguise. Name it precisely and the solution space shrinks to something you can actually ship.",
+    proof: "At Z2P, lending on cash flow instead of credit scores held NPA under 1%.",
+  },
+  {
+    title: "Get close to the customer before writing the spec.",
+    body: "Payment rails, regulators and habits differ by market. The fastest launch is the one that respects those differences up front.",
+    proof: "Localising for each market cut PayMate's go-to-market from 90 to 30 days.",
+  },
+  {
+    title: "Make it real, then hand it over well.",
+    body: "A working prototype settles debates a document can't. Then the job is a clean hand-off: specs, edge cases and success metrics engineering can trust.",
+    proof: "NiveshPe went from incorporation to a regulated live app in about 10 weeks.",
+  },
+];
+
+export const builds = [
+  {
+    title: "Accounts autopilot for restaurants",
+    status: "Live",
+    problem: "Small restaurants run on daily WhatsApp messages, not accounting software.",
+    what: "A WhatsApp AI agent that turns staff's daily Hinglish messages into a ledger, with cash checks, supplier dues, payroll, P&L, bank matching and reminders, and answers the owner's questions.",
+  },
+  {
+    title: "Embedded investing for B2B partners",
+    status: "In sales pitches",
+    problem: "Partners couldn't picture investing inside their own product.",
+    what: "Clickable white-label flows (portfolio sync, SIPs, baskets, bonds, pre-IPO, KYC at checkout) plus a partner MIS dashboard, reskinned per partner.",
+  },
+  {
+    title: "Search & answer-engine site for a freight forwarder",
+    status: "Launching",
+    problem: "Needed to be found in both search and AI answer engines.",
+    what: "A site built from teardowns of 18 competitor sites, with content structured for both search and AI answer engines.",
+  },
+];
+
+export type Role = {
+  company: string;
+  title: string;
+  period: string;
+  summary: string;
+};
+
+export const experience: Role[] = [
+  {
+    company: "NiveshPe",
+    title: "Co-Founder & Chief Product Officer",
+    period: "Aug 2025 – Present",
+    summary:
+      "AMFI-registered, AI-assisted wealth platform. Own product vision through go-live: advisory engine, ORBIT AI, 15+ regulated integrations and the full lifecycle stack.",
+  },
+  {
+    company: "PayMate",
+    title: "Lead Product Manager (AVP)",
+    period: "Apr 2024 – Jul 2025",
+    summary:
+      "B2B payments launches across 4 APAC markets, GTM cut by 67%. ERP integrations (SAP Taulia, Oracle) and the BharatConnect (NPCI) integration; 7+ cross-functional teams.",
+  },
+  {
+    company: "PayMate",
+    title: "Senior Manager, Product Delivery",
+    period: "Jun 2022 – Mar 2024",
+    summary:
+      "Cut OTP and bank-verification failures by 60%; lifted KYC conversion by 20%; led UAE, Singapore and Australia rollouts.",
+  },
+  {
+    company: "PayMate",
+    title: "Senior Manager, Product & Operations",
+    period: "Nov 2019 – May 2022",
+    summary:
+      "MVP for India and UAE with 300K+ SME registrations in year one; an industry-first in-app GST challan flow; co-created the “Sherlock” fraud engine.",
+  },
+  {
+    company: "Z2P (acquired by PayMate)",
+    title: "Co-Founder & Chief Lending and Investment Officer",
+    period: "Aug 2016 – Oct 2019",
+    summary:
+      "Built one of India's top P2P lending platforms: 1M+ downloads, 60K+ loans, a ₹100 Cr loan book, 100+ HNI lenders and a 30+ person team.",
+  },
+];
+
+export const credentials = [
+  {
+    title: "AI Product Strategy & Build Lab",
+    by: "Curious PM · 2025",
+    href: "https://almas.curious.pm/certificate/ai-product-strategy-build-lab",
+  },
+  { title: "NISM Series V-A & V-D", by: "Mutual fund distribution · 2026" },
+  { title: "Global Shaper", by: "World Economic Forum · 2017–2024" },
+  { title: "Product demos", by: "SIDEC Malaysia & Global Fintech Fest · 2024" },
+  { title: "Best Fintech in Madhya Pradesh", by: "Chief Minister's Award · 2017" },
+  { title: "B.Tech", by: "VIT University, Vellore · 2016" },
+];
