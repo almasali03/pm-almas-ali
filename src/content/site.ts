@@ -121,45 +121,96 @@ export const credentials = [
 
 // Logos: `icon` is a simple-icons export in brand colour; `img` is a file in /public/logos.
 // `imgDark` swaps the file in dark mode; `invertDark` inverts a black mark in dark mode.
-export type Tool = { name: string; icon?: string; img?: string; imgDark?: string; invertDark?: boolean };
+// `use` is where/how the tool was used (from the master resume), or its purpose if the resume only lists it.
+export type Tool = { name: string; use: string; icon?: string; img?: string; imgDark?: string; invertDark?: boolean };
 
-export const toolkit: { label: string; tools: Tool[] }[] = [
+export const toolkit: { label: string; purpose: string; tools: Tool[] }[] = [
   {
-    label: "AI & prototyping",
+    label: "AI models & agents",
+    purpose: "The models and building blocks behind AI features.",
     tools: [
-      { name: "Claude", icon: "siClaude" },
-      { name: "OpenAI API", img: "/logos/openai.svg", invertDark: true },
-      { name: "MCP", icon: "siModelcontextprotocol" },
-      { name: "ElevenLabs", icon: "siElevenlabs" },
-      { name: "n8n", icon: "siN8n" },
-      { name: "Zapier", icon: "siZapier" },
-      { name: "Make", icon: "siMake" },
-      { name: "React Native", icon: "siReact" },
-      { name: "Expo", icon: "siExpo" },
-      { name: "Figma", icon: "siFigma" },
-      { name: "Postman", icon: "siPostman" },
-      { name: "AWS", img: "/logos/aws.svg", imgDark: "/logos/aws-dark.svg" },
+      { name: "Claude", icon: "siClaude", use: "AI agents & assistants, incl. restaurant accounts agent" },
+      { name: "OpenAI API", img: "/logos/openai.svg", invertDark: true, use: "Chatbot and job-search agent builds" },
+      { name: "MCP", icon: "siModelcontextprotocol", use: "Agent connecting Jira, Slack and Notion" },
+      { name: "ElevenLabs", icon: "siElevenlabs", use: "Voice assistants with memory" },
     ],
   },
   {
-    label: "Growth, analytics & delivery",
+    label: "Prototyping & design",
+    purpose: "Working versions engineers can build from.",
     tools: [
-      { name: "Amplitude", img: "/logos/amplitude.png" },
-      { name: "Mixpanel", icon: "siMixpanel" },
-      { name: "Google Analytics 4", icon: "siGoogleanalytics" },
-      { name: "Firebase", icon: "siFirebase" },
-      { name: "CleverTap", img: "/logos/clevertap.png" },
-      { name: "SuprSend", img: "/logos/suprsend.png" },
-      { name: "Branch", img: "/logos/branch.png", invertDark: true },
-      { name: "Linkrunner", img: "/logos/linkrunner.png" },
-      { name: "Meta Ads", icon: "siMeta" },
-      { name: "Google Ads", icon: "siGoogleads" },
-      { name: "Power BI", img: "/logos/powerbi.png" },
-      { name: "Zoho", icon: "siZoho" },
-      { name: "Freshworks", img: "/logos/freshworks.png" },
-      { name: "Jira", icon: "siJira" },
-      { name: "Confluence", icon: "siConfluence" },
-      { name: "Linear", icon: "siLinear" },
+      { name: "Figma", icon: "siFigma", use: "Flows, wireframes and UI specs" },
+      { name: "React Native", icon: "siReact", use: "Clickable app prototypes used as build specs" },
+      { name: "Expo", icon: "siExpo", use: "Shipping those prototypes to real phones" },
+    ],
+  },
+  {
+    label: "Workflow automation",
+    purpose: "Connecting tools so ops run without manual work.",
+    tools: [
+      { name: "n8n", icon: "siN8n", use: "Multi-step automations and AI workflows" },
+      { name: "Zapier", icon: "siZapier", use: "No-code app-to-app automations" },
+      { name: "Make", icon: "siMake", use: "Visual automation scenarios" },
+    ],
+  },
+  {
+    label: "APIs & cloud",
+    purpose: "Integrating partners and running what I build.",
+    tools: [
+      { name: "Postman", icon: "siPostman", use: "Documented & tested 15+ regulated APIs at NiveshPe" },
+      { name: "AWS", img: "/logos/aws.svg", imgDark: "/logos/aws-dark.svg", use: "Hosting the restaurant accounts agent" },
+    ],
+  },
+  {
+    label: "Product analytics",
+    purpose: "What users actually do inside the product.",
+    tools: [
+      { name: "Amplitude", img: "/logos/amplitude.png", use: "Set up product analytics at NiveshPe" },
+      { name: "Google Analytics 4", icon: "siGoogleanalytics", use: "Web & app analytics stack at PayMate" },
+      { name: "Firebase", icon: "siFirebase", use: "App analytics stack at PayMate" },
+      { name: "Mixpanel", icon: "siMixpanel", use: "Event-based funnel and retention analysis" },
+    ],
+  },
+  {
+    label: "Attribution & deep linking",
+    purpose: "Which ad or link brought each user in.",
+    tools: [
+      { name: "Branch", img: "/logos/branch.png", invertDark: true, use: "Attribution & deep links at PayMate and NiveshPe" },
+      { name: "Linkrunner", img: "/logos/linkrunner.png", use: "Install attribution for NiveshPe's paid campaigns" },
+    ],
+  },
+  {
+    label: "Lifecycle & engagement",
+    purpose: "Messages that move users to the next step.",
+    tools: [
+      { name: "SuprSend", img: "/logos/suprsend.png", use: "45+ workflows across 5 channels at NiveshPe" },
+      { name: "CleverTap", img: "/logos/clevertap.png", use: "Segmentation & targeted campaigns at PayMate" },
+    ],
+  },
+  {
+    label: "Paid acquisition",
+    purpose: "Buying installs at a cost the business can afford.",
+    tools: [
+      { name: "Meta Ads", icon: "siMeta", use: "NiveshPe campaigns under ₹80 per install" },
+      { name: "Google Ads", icon: "siGoogleads", use: "NiveshPe app-install campaigns" },
+    ],
+  },
+  {
+    label: "Reporting, support & CRM",
+    purpose: "Business reporting and the customer back office.",
+    tools: [
+      { name: "Power BI", img: "/logos/powerbi.png", use: "MIS dashboards and business reporting" },
+      { name: "Zoho", icon: "siZoho", use: "CRM and sales pipeline" },
+      { name: "Freshworks", img: "/logos/freshworks.png", use: "Customer support ticketing" },
+    ],
+  },
+  {
+    label: "Delivery & docs",
+    purpose: "Planning sprints and keeping teams aligned.",
+    tools: [
+      { name: "Jira", icon: "siJira", use: "Sprints & backlogs as Product Owner at PayMate" },
+      { name: "Confluence", icon: "siConfluence", use: "PRDs, specs and team documentation" },
+      { name: "Linear", icon: "siLinear", use: "Issue tracking and product roadmaps" },
     ],
   },
 ];

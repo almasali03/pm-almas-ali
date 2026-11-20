@@ -91,21 +91,27 @@ export function Toolkit() {
   return (
     <>
       <div
-        className="grid gap-10 lg:grid-cols-2"
+        className="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5 [&>*]:break-inside-avoid"
         style={{ "--cycle": `${total * HIGHLIGHT_STEP_S}s`, "--step": `${HIGHLIGHT_STEP_S}s` } as CSSProperties}
       >
         {toolkit.map((group, g) => (
-          <Reveal key={group.label} delay={g * 120}>
-            <p className="eyebrow mb-4">{group.label}</p>
-            <ul className="flex flex-wrap gap-2.5">
+          <Reveal key={group.label} delay={(g % 3) * 100} className="rounded-3xl border border-line bg-raised p-6">
+            <p className="eyebrow">{group.label}</p>
+            <p className="mt-2 text-sm text-ink-soft">{group.purpose}</p>
+            <ul className="mt-5 space-y-2">
               {group.tools.map((tool) => (
                 <li
                   key={tool.name}
-                  className="tool flex items-center gap-2.5 rounded-xl border border-line bg-raised py-2 pr-3.5 pl-2.5"
+                  className="tool flex items-center gap-3 rounded-xl border border-line bg-bg p-2.5"
                   style={{ "--i": index++ } as CSSProperties}
                 >
-                  <Logo tool={tool} />
-                  <span className="text-sm font-medium whitespace-nowrap text-ink">{tool.name}</span>
+                  <span className="grid size-9 shrink-0 place-items-center rounded-lg border border-line bg-raised">
+                    <Logo tool={tool} />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-sm font-semibold text-ink">{tool.name}</span>
+                    <span className="block text-xs leading-snug text-ink-soft">{tool.use}</span>
+                  </span>
                 </li>
               ))}
             </ul>
