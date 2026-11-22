@@ -3,6 +3,7 @@ import type { CSSProperties } from "react";
 import {
   siClaude,
   siConfluence,
+  siDigitalocean,
   siElevenlabs,
   siExpo,
   siFigma,
@@ -18,6 +19,8 @@ import {
   siN8n,
   siPostman,
   siReact,
+  siVercel,
+  siWhatsapp,
   siZapier,
   siZoho,
   type SimpleIcon,
@@ -28,6 +31,7 @@ import { Reveal } from "./Reveal";
 const ICONS: Record<string, SimpleIcon> = {
   siClaude,
   siConfluence,
+  siDigitalocean,
   siElevenlabs,
   siExpo,
   siFigma,
@@ -43,6 +47,8 @@ const ICONS: Record<string, SimpleIcon> = {
   siN8n,
   siPostman,
   siReact,
+  siVercel,
+  siWhatsapp,
   siZapier,
   siZoho,
 };
