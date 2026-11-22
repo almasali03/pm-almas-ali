@@ -131,6 +131,7 @@ export const toolkit: { label: string; purpose: string; tools: Tool[] }[] = [
     tools: [
       { name: "Claude", icon: "siClaude", use: "AI agents & assistants with tool use" },
       { name: "OpenAI API", img: "/logos/openai.svg", invertDark: true, use: "Chatbots and agent builds" },
+      { name: "Ollama", icon: "siOllama", use: "Open-source models powering a conversational chatbot" },
       { name: "MCP", icon: "siModelcontextprotocol", use: "Agent connecting Jira, Slack and Notion" },
       { name: "ElevenLabs", icon: "siElevenlabs", use: "Voice assistants with memory" },
     ],
