@@ -129,7 +129,7 @@ export const toolkit: { label: string; purpose: string; tools: Tool[] }[] = [
     label: "AI models & agents",
     purpose: "The models and building blocks behind AI features.",
     tools: [
-      { name: "Claude", icon: "siClaude", use: "AI agents & assistants with tool use" },
+      { name: "Claude · Anthropic API", icon: "siClaude", use: "AI agents & assistants with tool use" },
       { name: "OpenAI API", img: "/logos/openai.svg", invertDark: true, use: "Chatbots and agent builds" },
       { name: "Ollama", icon: "siOllama", use: "Open-source models powering a conversational chatbot" },
       { name: "MCP", icon: "siModelcontextprotocol", use: "Agent connecting Jira, Slack and Notion" },
@@ -141,6 +141,7 @@ export const toolkit: { label: string; purpose: string; tools: Tool[] }[] = [
     purpose: "Working versions engineers can build from.",
     tools: [
       { name: "Figma", icon: "siFigma", use: "Flows, wireframes and UI specs" },
+      { name: "Lovable", img: "/logos/lovable.png", use: "Fast web prototypes and landing pages" },
       { name: "React Native", icon: "siReact", use: "Clickable app prototypes used as build specs" },
       { name: "Expo", icon: "siExpo", use: "Shipping those prototypes to real phones" },
     ],
