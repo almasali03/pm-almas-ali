@@ -129,8 +129,8 @@ export const toolkit: { label: string; purpose: string; tools: Tool[] }[] = [
     label: "AI models & agents",
     purpose: "The models and building blocks behind AI features.",
     tools: [
-      { name: "Claude", icon: "siClaude", use: "AI agents & assistants, incl. restaurant accounts agent" },
-      { name: "OpenAI API", img: "/logos/openai.svg", invertDark: true, use: "Chatbot and job-search agent builds" },
+      { name: "Claude", icon: "siClaude", use: "AI agents & assistants with tool use" },
+      { name: "OpenAI API", img: "/logos/openai.svg", invertDark: true, use: "Chatbots and agent builds" },
       { name: "MCP", icon: "siModelcontextprotocol", use: "Agent connecting Jira, Slack and Notion" },
       { name: "ElevenLabs", icon: "siElevenlabs", use: "Voice assistants with memory" },
     ],
@@ -158,8 +158,8 @@ export const toolkit: { label: string; purpose: string; tools: Tool[] }[] = [
     purpose: "Integrating partners and running what I build.",
     tools: [
       { name: "Postman", icon: "siPostman", use: "Documented & tested 15+ regulated APIs at NiveshPe" },
-      { name: "WhatsApp Business API", icon: "siWhatsapp", use: "Restaurant accounts agent and NiveshPe user journeys" },
-      { name: "AWS", img: "/logos/aws.svg", imgDark: "/logos/aws-dark.svg", use: "Hosting the restaurant accounts agent" },
+      { name: "WhatsApp Business API", icon: "siWhatsapp", use: "Conversational AI agents and NiveshPe user journeys" },
+      { name: "AWS", img: "/logos/aws.svg", imgDark: "/logos/aws-dark.svg", use: "Hosting AI agents in production" },
       { name: "DigitalOcean", icon: "siDigitalocean", use: "Cloud servers for hosting apps and agents" },
       { name: "Vercel", icon: "siVercel", use: "Deploying this site, with a preview link per change" },
     ],
